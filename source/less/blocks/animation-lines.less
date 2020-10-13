@@ -1,0 +1,74 @@
+.animation-lines {
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 15px;
+    position: relative;
+    margin: 30px auto;
+}
+
+.animation-lines::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: repeating-linear-gradient(
+    #fff,
+    #fff 30px,
+    #000 30px,
+    #000 60px);
+    transform: translateX(18%) translateY(-50%) rotate(45deg);
+    animation: animation-lines 10s linear infinite;
+}
+
+@keyframes animation-lines {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: 0 -450px;
+    }
+}
+
+@media (min-width: @size-tablet) {
+    .animation-lines {
+      width: 300px;
+      height: 300px;
+    }
+
+    .animation-lines::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: repeating-linear-gradient(
+        #fff,
+        #fff 40px,
+        #000 40px,
+        #000 80px);
+        transform: translateX(22%) translateY(-45%) rotate(45deg);
+        animation: animation-lines 10s linear infinite;
+    }
+}
+
+@media (min-width: @size-desktop) {
+  .animation-lines {
+    width: 800px;
+    height: 800px;
+  }
+
+  .animation-lines::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+      #fff,
+      #fff 80px,
+      #000 80px,
+      #000 160px);
+      transform: translateX(20%) translateY(-37%) rotate(45deg);
+      animation: animation-lines 10s linear infinite;
+  }
+}

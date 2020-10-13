@@ -1,0 +1,50 @@
+.buttons__link--yes {
+  background: @button-bg-yellow;
+  color: @button-color-black;
+}
+
+.buttons__link--yes:hover,
+.buttons__link--yes:focus {
+  background: @button-bg-yellow-hover;
+}
+
+.buttons__link--no {
+  background: @button-bg-black;
+  color: @button-color-white;
+}
+
+.buttons__link--no:hover,
+.buttons__link--no:focus {
+  background: @button-bg-black-hover;
+}
+
+.buttons__link--yes::before,
+.buttons__link--no::before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.buttons__link--yes::before {
+  background-image: url("../img/icon/up.svg");
+}
+.buttons__link--no::before {
+  background-image: url("../img/icon/face.svg");
+}
+
+
+@media (min-width: @size-desktop) {
+  .buttons__link--yes::before,
+  .buttons__link--no::before {
+    width: 52px;
+    height: 52px;
+    top: -52px;
+  }
+}

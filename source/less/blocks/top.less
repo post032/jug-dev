@@ -1,0 +1,107 @@
+.top {
+  box-sizing: border-box;
+  position: relative;
+  height: 100vh;
+}
+
+.top__logo img {
+  width: 126px;
+}
+
+.top__animation {
+  height: 168px;
+  overflow: hidden;
+  position: relative;
+}
+
+.top::after {
+  content: "";
+  display: block;
+  width: 270px;
+  height: 230px;
+  background: url("../img/jrg_live.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 40px;
+  right: -2px;
+}
+
+.top__content {
+  margin: 0 20px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.top__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .button {
+    margin-right: 21px;
+  }
+}
+
+@media (min-width: @size-tablet) {
+  .top {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .top__animation {
+    width: 70%;
+  }
+
+  .top::after {
+    width: 346px;
+    height: 295px;
+    top: 80px;
+
+  }
+
+  .top__buttons {
+    margin-top: 97px;
+  }
+}
+
+@media (min-width: @size-desktop) {
+  .top {
+    .title {
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+
+    .text {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+  }
+  .top__content {
+    margin: 149px 85px 0;
+  }
+
+  .top__animation {
+    height: 460px;
+    width: 90%;
+  }
+
+  .top::after {
+    width: 481px;
+    height: 411px;
+    top: 160px;
+  }
+
+  .top__buttons {
+    margin-top: 118px;
+
+    .button {
+      min-height: 64px;
+    }
+}
+}
+@media (min-width: 1280px) {
+  .top::after {
+    width: 716px;
+    height: 611px;
+    top: 99px;
+  }
+}

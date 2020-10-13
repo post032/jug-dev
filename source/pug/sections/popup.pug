@@ -1,0 +1,23 @@
+article.popup
+  div.popup__forms
+    div.popup__section.popup__no
+      form(method="post" action="#").popup__form
+        h2.popup__title Идите в жопу!
+        label(for="radio1").popup__label Вы свои цены видели?
+        input(id="radio1" type="radio" value="Вы свои цены видели?").visually-hidden/
+        label(for="radio2").popup__label Доклады ни о чем
+        input(id="radio2" type="radio" value="Доклады ни о чем").visually-hidden/
+        label(for="radio3").popup__label У вас там всё хорошо?
+        input(id="radio3" type="radio" value="У вас там всё хорошо?").visually-hidden/
+        label(for="radio4").popup__label Денег нет, но вы держитесь
+        input(id="radio4" type="radio" value="Денег нет, но вы держитесь").visually-hidden/
+    div.popup__section.popup__yes
+      form(method="post" action="#").popup__form
+        h2.popup__title Я хочу знать, когда  будет офлайн
+        div.popup__block
+          label(for="mail").visually-hidden email
+          input(id="mail" type="email" placeholder="Укажите email" required)/
+          button(type="submit") Подписаться
+        p.popup__info Нажимая на кнопку вы соглашаетесь<br>  на обработку 
+          a(href="#") персональных данных
+  a(href="#").popup__back Я кликнул просто посмотреть
